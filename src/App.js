@@ -6,7 +6,7 @@ import thunkMiddleware from 'redux-thunk';
 import {timeline} from './reducers/timeline';
 import {notificacao} from './reducers/header';
 
-const reducers = {timeline,notificacao};
+const reducers = combineReducers({timeline,notificacao});
 const store = createStore(reducers,applyMiddleware(thunkMiddleware));
 
 class App extends Component {
